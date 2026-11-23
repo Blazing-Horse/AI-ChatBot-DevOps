@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Chatbot with Memory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>AI Chatbot with Memory</h1>
+    <p class="hint">Tell me something, then ask me about it later. I remember this chat.</p>
+    <div id="messages" aria-live="polite"></div>
+    <form id="chat-form">
+      <input id="message" type="text" maxlength="2000" placeholder="Type a message" required>
+      <button type="submit">Send</button>
+    </form>
+    <button id="new-chat" type="button" class="secondary">Start a new chat</button>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

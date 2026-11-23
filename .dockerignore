@@ -1,0 +1,17 @@
+# Git history and GitHub settings
+.git
+.github
+# Local Python environment and caches
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+# Folders the API doesn't need to run
+tests
+infra
+web
+docs
+scripts
+# Documentation files
+*.md

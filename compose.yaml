@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      USE_FAKES: "true"
+      ALLOWED_ORIGINS: "http://localhost:8080"
+  web:
+    image: nginx:1.31.8-alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
