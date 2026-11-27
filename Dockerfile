@@ -9,6 +9,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /srv
 COPY --from=build /install /usr/local
 COPY app ./app
+RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
+RUN pip uninstall -y pip setuptools
 RUN useradd --create-home --uid 10001 appuser
 USER appuser
 EXPOSE 8000
